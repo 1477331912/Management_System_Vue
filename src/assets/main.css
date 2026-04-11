@@ -1,0 +1,7 @@
+@import './base.css';
+
+/* 根容器占满视口，确保后台布局能完整铺开。 */
+#app {
+  width: 100%;
+  min-height: 100vh;
+}

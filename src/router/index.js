@@ -6,6 +6,10 @@ import HomePage from '@/pages/HomePage.vue'
 import DeptManagePage from '@/pages/DeptManagePage.vue'
 import EmpManagePage from '@/pages/EmpManagePage.vue'
 import LoginPage from '@/pages/LoginPage.vue'
+import CustomerManagePage from '@/pages/CustomerManagePage.vue'
+import PetManagePage from '@/pages/PetManagePage.vue'
+import ServiceProjectManagePage from '@/pages/ServiceProjectManagePage.vue'
+import OrderManagePage from '@/pages/OrderManagePage.vue'
 
 // 路由表：
 // - /login 登录页（无需 token）
@@ -15,7 +19,11 @@ const routes = [
   { path: '/login', name: 'login', component: LoginPage, meta: { public: true } },
   { path: '/home', name: 'home', component: HomePage, meta: { title: '首页' } },
   { path: '/department', name: 'department', component: DeptManagePage, meta: { title: '部门管理' } },
-  { path: '/staff', name: 'staff', component: EmpManagePage, meta: { title: '员工管理' } }
+  { path: '/staff', name: 'staff', component: EmpManagePage, meta: { title: '员工管理' } },
+  { path: '/customers', name: 'customers', component: CustomerManagePage, meta: { title: '客户管理' } },
+  { path: '/pets', name: 'pets', component: PetManagePage, meta: { title: '宠物管理' } },
+  { path: '/service-projects', name: 'serviceProjects', component: ServiceProjectManagePage, meta: { title: '服务项目管理' } },
+  { path: '/orders', name: 'orders', component: OrderManagePage, meta: { title: '订单管理' } }
 ]
 
 // 创建路由实例。

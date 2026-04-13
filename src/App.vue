@@ -5,7 +5,17 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessageBox } from 'element-plus'
 // 引入 Element Plus 图标组件：用于菜单项前的图标展示。
-import { HomeFilled, Setting, OfficeBuilding, UserFilled, SwitchButton } from '@element-plus/icons-vue'
+import {
+  Avatar,
+  Bowl,
+  HomeFilled,
+  OfficeBuilding,
+  Service,
+  Setting,
+  ShoppingBag,
+  SwitchButton,
+  UserFilled
+} from '@element-plus/icons-vue'
 import { getStoredUser, logout as logoutAuth } from '@/api/auth'
 
 // 当前登录用户姓名（登录成功后从本地缓存读取）。
@@ -23,14 +33,8 @@ watch(
   { immediate: true }
 )
 
-// 根据当前路由动态计算右侧区域标题。
-const pageTitle = computed(() => {
-  if (route.path === '/home') return '首页'
-  if (route.path === '/department') return '部门管理'
-  if (route.path === '/staff') return '员工管理'
-  // 兜底标题，避免异常情况下出现空标题。
-  return '首页'
-})
+// 根据路由 meta.title 显示右侧区域标题。
+const pageTitle = computed(() => route.meta?.title || '首页')
 
 // 退出登录：先弹确认框，确认后清除登录态并回到登录页。
 async function onLogout() {
@@ -93,6 +97,24 @@ async function onLogout() {
               <span>员工管理</span>
             </el-menu-item>
           </el-sub-menu>
+
+          <!-- 与「系统信息管理」同级：门店业务模块。 -->
+          <el-menu-item index="/customers">
+            <el-icon><Avatar /></el-icon>
+            <span>客户管理</span>
+          </el-menu-item>
+          <el-menu-item index="/pets">
+            <el-icon><Bowl /></el-icon>
+            <span>宠物管理</span>
+          </el-menu-item>
+          <el-menu-item index="/service-projects">
+            <el-icon><Service /></el-icon>
+            <span>服务项目管理</span>
+          </el-menu-item>
+          <el-menu-item index="/orders">
+            <el-icon><ShoppingBag /></el-icon>
+            <span>订单管理</span>
+          </el-menu-item>
         </el-menu>
       </el-aside>
 

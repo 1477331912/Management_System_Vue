@@ -18,7 +18,7 @@ import { getPetPage } from '@/api/pet'
 import { getServiceItemPage } from '@/api/serviceItem'
 
 const statusOptions = [
-  { label: '待确认', value: 1 },
+  { label: '已预约', value: 1 },
   { label: '进行中', value: 2 },
   { label: '已完成', value: 3 },
   { label: '已取消', value: 4 }

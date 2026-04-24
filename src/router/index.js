@@ -5,6 +5,7 @@ import { getToken } from '@/api/request'
 import HomePage from '@/pages/HomePage.vue'
 import DeptManagePage from '@/pages/DeptManagePage.vue'
 import EmpManagePage from '@/pages/EmpManagePage.vue'
+import ScheduleManagePage from '@/pages/ScheduleManagePage.vue'
 import LoginPage from '@/pages/LoginPage.vue'
 import CustomerManagePage from '@/pages/CustomerManagePage.vue'
 import PetManagePage from '@/pages/PetManagePage.vue'
@@ -20,6 +21,7 @@ const routes = [
   { path: '/home', name: 'home', component: HomePage, meta: { title: '首页' } },
   { path: '/department', name: 'department', component: DeptManagePage, meta: { title: '部门管理' } },
   { path: '/staff', name: 'staff', component: EmpManagePage, meta: { title: '员工管理' } },
+  { path: '/schedule', name: 'schedule', component: ScheduleManagePage, meta: { title: '员工排班管理' } },
   { path: '/customers', name: 'customers', component: CustomerManagePage, meta: { title: '客户管理' } },
   { path: '/pets', name: 'pets', component: PetManagePage, meta: { title: '宠物管理' } },
   { path: '/service-projects', name: 'serviceProjects', component: ServiceProjectManagePage, meta: { title: '服务项目管理' } },

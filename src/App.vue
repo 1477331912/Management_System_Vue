@@ -8,6 +8,7 @@ import { ElMessageBox } from 'element-plus'
 import {
   Avatar,
   Bowl,
+  Calendar,
   HomeFilled,
   OfficeBuilding,
   Service,
@@ -95,6 +96,10 @@ async function onLogout() {
             <el-menu-item index="/staff">
               <el-icon><UserFilled /></el-icon>
               <span>员工管理</span>
+            </el-menu-item>
+            <el-menu-item index="/schedule">
+              <el-icon><Calendar /></el-icon>
+              <span>员工排班管理</span>
             </el-menu-item>
           </el-sub-menu>
 
